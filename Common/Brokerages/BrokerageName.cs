@@ -202,6 +202,11 @@ namespace QuantConnect.Brokerages
         /// <summary>
         /// Transaction and submit/execution rules will use Webull models
         /// </summary>
-        Webull
+        Webull,
+
+        /// <summary>
+        /// Transaction and submit/execution rules will use MetaTrader 5 models (TCP bridge)
+        /// </summary>
+        Mt5,
     }
 }

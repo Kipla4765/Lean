@@ -294,6 +294,9 @@ namespace QuantConnect.Brokerages
                 case BrokerageName.Webull:
                     return new WebullBrokerageModel(accountType);
 
+                case BrokerageName.Mt5:
+                    return new Mt5BrokerageModel(accountType);
+
                 default:
                     throw new ArgumentOutOfRangeException(nameof(brokerage), brokerage, null);
             }
@@ -399,6 +402,9 @@ namespace QuantConnect.Brokerages
 
                 case WebullBrokerageModel:
                     return BrokerageName.Webull;
+
+                case Mt5BrokerageModel:
+                    return BrokerageName.Mt5;
 
                 case DefaultBrokerageModel _:
                     return BrokerageName.Default;
